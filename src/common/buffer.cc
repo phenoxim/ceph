@@ -1904,7 +1904,7 @@ static simple_spinlock_t buffer_debug_lock = SIMPLE_SPINLOCK_INITIALIZER;
       }
       return (*p)[n];
     }
-    assert(0);
+    ceph_abort();
   }
 
   /*

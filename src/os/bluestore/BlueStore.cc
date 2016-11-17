@@ -2359,7 +2359,7 @@ BlueStore::OnodeRef BlueStore::Collection::get_onode(
     if (!oid.match(cnode.bits, pgid.ps())) {
       derr << __func__ << " oid " << oid << " not part of " << pgid
 	   << " bits " << cnode.bits << dendl;
-      assert(0);
+      ceph_abort();
     }
   }
 
@@ -7220,7 +7220,7 @@ void BlueStore::_txc_add_transaction(TransContext *txc, Transaction *t)
 
     default:
       derr << __func__ << "bad op " << op->op << dendl;
-      assert(0);
+      ceph_abort();
     }
 
   endop:
