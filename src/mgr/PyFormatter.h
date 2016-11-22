@@ -31,6 +31,7 @@
 #include <list>
 
 #include "common/Formatter.h"
+#include "include/assert.h"
 
 class PyFormatter : public ceph::Formatter
 {
